@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+	<head>
+		<title>Weather & Clothes</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<!--
+		<link rel="shortcut icon" href="" type="image/x-icon">
+		<link rel="icon" href="o" type="image/x-icon">
+		-->
+		<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+		<script src="{{ url_for('static', filename='script.js') }}"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<section id="weather" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('{{ url_for('static', filename='images/weather/background/' + icon + '.jpg') }}') no-repeat center center; background-size: cover;">
+				<div class="area">
+					<div class="date">
+						{{ now.year }}<span>년</span> {{ now.month }}<span>월</span> {{ now.day }}<span>일</span>
+					</div>
+					<div class="day">
+						{{ now.hour }}:{{ now.minute }} 기준
+					</div>
+					<div class="location">
+						<img src="{{ url_for('static', filename='images/weather/flag.png') }}">{{ cityname }}, Korea
+					</div>
+					<div class="now">
+						<div class="main">
+							<img src="{{ url_for('static', filename='images/weather/icon/' + icon + '.png') }}">
+						</div>
+						<div class="temperature">
+							{{ main }}<br><span>{{ curtemp }}<sup>℃</sup></span>
+						</div>
+					</div>
+					<div class="today">
+						<table>
+							<tr>
+								<td>최저 온도</td>
+								<td>{{ mintemp }}<sup>℃</sup></td>
+							</tr>
+							<tr>
+								<td>최고 온도</td>
+								<td>{{ maxtemp }}<sup>℃</sup></td>
+							</tr>
+							<tr>
+								<td>풍속</td>
+								<td>{{ windspeed }}<sup>m/s</sup></td>
+							</tr>
+						</table>
+					</div>
+
+					<form action="upload" method="post" enctype="multipart/form-data">
+						<label for="ex_file" class="button">지금 이 옷 입어도 될까?</label>
+						<input type="file" name="file" id="ex_file" onchange="javascript:this.form.submit();">
+					</form>
+
+					<div class="description">
+						Upload your clothes
+					</div>
+				</div>
+			</section>
+			<section id="banner">
+				<form action="survey" method="post" enctype="multipart/form-data">
+					지금
+					<select name="cloth">
+						<option value="1">코트</option>
+						<option value="2">패딩</option>
+						<option value="3">반팔티</option>
+						<option value="4">셔츠</option>
+						<option value="5">후드티</option>	
+					</select>
+					입었더니 
+					<button class="good" value="1" name="goodButton" onclick="sendJebo();"><img src="{{ url_for('static', filename='images/banner/good.png') }}"></button>
+					<button class="bad" value="0" name="badButton" onclick="sendJebo();"><img src="{{ url_for('static', filename='images/banner/bad.png') }}"></button>
+				</form>
+			</section>
+		</div>
+	</body>
+</html>
