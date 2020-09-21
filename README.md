@@ -1,4 +1,4 @@
-#KU OSSP ( Open Source Software Project ) 수업 기말 프로젝트 (Open Source를 활용)
+KU OSSP ( Open Source Software Project ) 수업 기말 프로젝트 (Open Source를 활용)
 ===================
 
  ##설계
