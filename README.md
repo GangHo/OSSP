@@ -5,7 +5,7 @@ KU OSSP ( Open Source Software Project ) 수업 기말 프로젝트 (Open Source
 ----------------
 <img src="https://user-images.githubusercontent.com/23518342/93785387-02628c80-fc69-11ea-8ae9-f917529385c1.png" width="100%" height="100%"></img>
 
-=================
+
 ### 사용자 시나리오
 ----------------------
 사용자가 옷 사진 을 업로드 -> 현재 날씨 정보 를 기반으로 오늘 입어도 되는지 분석
