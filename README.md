@@ -3,7 +3,7 @@ KU OSSP ( Open Source Software Project ) 수업 기말 프로젝트 (Open Source
 
 설계
 ----------------
-<img src="https://user-images.githubusercontent.com/23518342/93785387-02628c80-fc69-11ea-8ae9-f917529385c1.png" width="100%" height="100%"></img>
+<img src="https://user-images.githubusercontent.com/23518342/93785387-02628c80-fc69-11ea-8ae9-f917529385c1.png" width="75%" height="75%"></img>
 
 
 ### 사용자 시나리오
